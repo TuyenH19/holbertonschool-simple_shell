@@ -8,5 +8,7 @@
 #include <string.h>
 
 extern char **environ;
+char *read_line(void);
+int create_new_process(char *command, char **args);
 
 #endif
