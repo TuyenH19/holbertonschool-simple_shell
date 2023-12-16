@@ -10,5 +10,7 @@
 extern char **environ;
 char *read_line(void);
 int create_new_process(char *command, char **args);
+int builtin_exit(char **args);
+int builtin_env(char **args);
 
 #endif
