@@ -21,4 +21,6 @@ int builtin_exit(char **args);
 int builtin_env(char **args);
 int run_execute(char **args);
 
+char *find_executable(char *program);
+
 #endif
