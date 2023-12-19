@@ -19,6 +19,6 @@ char **get_args(char *input);
 int create_new_process(char **args);
 int builtin_exit(char **args);
 int builtin_env(char **args);
-int run_execute(char *input);
+int run_execute(char **args);
 
 #endif
