@@ -1,0 +1,35 @@
+.\" Manpage for Simple Shell.
+.TH _SHELL 1 "22 December 2023" "Version 1.0" "Linux Programmer's Manual"
+
+.SH NAME
+.B Simple Shell - create a simple shell to used in C language 
+
+.SH SYNOPSIS
+#include "shell.h"
+
+int _shell(int ac, char **argv);
+
+.SH DESCRIPTION
+.B 
+
+.SH PARAMETERS
+
+.SH FORMAT SPECIFIERS
+
+.SH EXAMPLES
+.B out the ./hsh echo \"ls\" | ./hsh
+
+It shows the ls command use by the passive way
+
+.B in the ./hsh ls -l
+...
+
+.B in the ./hsh exit
+
+It exits the programme
+
+
+
+.SH AUTHOR
+.SS Tuyen Huynh
+.SS Gab Martin
