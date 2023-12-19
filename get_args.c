@@ -15,15 +15,12 @@ char **get_args(char *input)
 
 	if (tokens == NULL)
 	{
-		fprintf(stderr, "allocation error in split_line: tokens\n");
+		fprintf(stderr, "allocation error in get_args: tokens\n");
 		exit(EXIT_FAILURE);
 	}
 	token = strtok(input, TOK_DELIM);
 	while (token != NULL)
 	{
-		if (token[0] == '#')
-			break;
-
 		tokens[index] = token;
 		index++;
 
@@ -33,7 +30,7 @@ char **get_args(char *input)
 			tokens = realloc(tokens, buffsize * sizeof(char *));
 			if (tokens == NULL)
 			{
-				fprintf(stderr, "reallocation error in split_line: tokens");
+				fprintf(stderr, "reallocation error in get_args: tokens");
 				exit(EXIT_FAILURE);
 			}
 		}
