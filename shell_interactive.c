@@ -6,18 +6,15 @@
  */
 void shell_interactive(void)
 {
-	char *line = NULL;
-	char **args = NULL;
+	char *input = NULL;
 	int status = -1;
 
 	do {
-		printf("$ ");
-		line = read_line();
-		args = split_line(line)
-		status = execute_args(args);
+		printf("($) ");
+		input = read_input();
+		status = run_execute(input);
 
-		free(line);
-		free(args);
+		free(input);
 
 		if (status >= 0)
 			exit(status);
