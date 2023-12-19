@@ -26,7 +26,7 @@ int create_new_process(char **args)
 			executable_path = find_executable(args[0]);
 			if (executable_path == NULL)
 			{
-				perror("./hsh: command not found");
+				fprintf(stderr, "./hsh: 1: %s: not found\n", args[0]);
 				exit(EXIT_FAILURE);
 			}
 		}
