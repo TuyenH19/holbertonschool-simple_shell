@@ -1,12 +1,12 @@
 #include "shell.h"
 
 /**
- * split_line - split a string into multiple strings
- * @line: string to be splited
+ * get_args - get arguments from terminal input
+ * @input: input from terminal
  *
  * Return: pointer that points to the new array
  */
-char **split_line(char *line)
+char **get_args(char *input)
 {
 	int buffsize = 64;
 	int index = 0;
@@ -18,7 +18,7 @@ char **split_line(char *line)
 		fprintf(stderr, "allocation error in split_line: tokens\n");
 		exit(EXIT_FAILURE);
 	}
-	token = strtok(line, TOK_DELIM);
+	token = strtok(input, TOK_DELIM);
 	while (token != NULL)
 	{
 		if (token[0] == '#')

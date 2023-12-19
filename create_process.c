@@ -2,12 +2,11 @@
 
 /**
  * create_new_process - create new child process
- * @command: the command input
  * @args: arguments
  *
  * Return: -1 if process finish
 */
-int create_new_process(char *command, char **args)
+int create_new_process(char **args)
 {
 	pid_t pid;
 	int status;
@@ -17,7 +16,7 @@ int create_new_process(char *command, char **args)
 		perror("cannot create child process");
 	else if (pid == 0)
 	{
-		if (execve(command, args, environ) == -1)
+		if (execve(args[0], args, environ) == -1)
 			perror("./hsh");
 		exit(EXIT_FAILURE);
 	}

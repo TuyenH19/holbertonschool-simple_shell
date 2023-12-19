@@ -1,28 +1,28 @@
 #include"shell.h"
 
 /**
- * read_line - read the line input
+ * read_input - read the input
  *
- * Return: the line
+ * Return: the input
 */
-char *read_line(void)
+char *read_input(void)
 {
-	char *line = NULL;
+	char *input = NULL;
 	size_t buffer = 0;
 
-	if (getline(&line, &buffer, stdin) == -1)
+	if (getline(&input, &buffer, stdin) == -1)
 	{
 		if (feof(stdin))
 		{
-			free(line);
+			free(input);
 			exit(EXIT_SUCCESS);
 		}
 		else
 		{
-			free(line);
+			free(input);
 			perror("cannot read the line from stdin");
 			exit(EXIT_FAILURE);
 		}
 	}
-	return (line);
+	return (input);
 }
