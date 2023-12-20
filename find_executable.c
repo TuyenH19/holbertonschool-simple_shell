@@ -15,9 +15,9 @@ char *find_executable(char *program)
 
 	if (full_path == NULL)
 	{
-        free(path_copy);
-        return (NULL);
-    }
+		free(path_copy);
+		return (NULL);
+	}
 
 	while (directory != NULL)
 	{
