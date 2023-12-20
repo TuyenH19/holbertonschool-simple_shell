@@ -30,10 +30,11 @@ char *read_stream(void)
 		else
 			input[i] = character;
 		i++;
-		if (i > bufsize)
+
+		if (i >= bufsize)
 		{
-			bufsize += bufsize;
-			input = realloc(input, bufsize);
+			bufsize *= 2;
+			input = realloc(input, bufsize * sizeof(char));
 			if (input == NULL)
 			{
 				fprintf(stderr, "reallocation error in read_stream");
