@@ -2,11 +2,12 @@
 
 /**
  * run_execute - to execute the program
+ * @prog_name: program name (argv[0])
  * @args: arguments from terminal
  *
  * Return: status
 */
-int run_execute(char **args)
+int run_execute(char *prog_name, char **args)
 {
 	char *builtin_func_list[] = {
 		"exit",
@@ -25,5 +26,5 @@ int run_execute(char **args)
 		if (strcmp(args[0], builtin_func_list[i]) == 0)
 			return ((*builtin_func[i])(args));
 	}
-	return (create_new_process(args));
+	return (create_new_process(prog_name, args));
 }

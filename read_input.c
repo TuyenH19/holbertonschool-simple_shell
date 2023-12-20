@@ -2,10 +2,10 @@
 
 /**
  * read_input - read the input
- *
+ * @prog_name: program name (argv[0])
  * Return: the input
 */
-char *read_input(void)
+char *read_input(char *prog_name)
 {
 	char *input = NULL;
 	size_t buffer = 0;
@@ -20,7 +20,7 @@ char *read_input(void)
 		else
 		{
 			free(input);
-			perror("cannot read the line from stdin");
+			fprintf(stderr, "%s: 1: cannot read the line from stdin\n", prog_name);
 			exit(EXIT_FAILURE);
 		}
 	}

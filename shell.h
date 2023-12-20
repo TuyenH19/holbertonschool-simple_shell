@@ -10,16 +10,16 @@
 #define TOK_DELIM " \n"
 extern char **environ;
 
-void shell_interactive(void);
-void shell_no_interactive(void);
+void shell_interactive(char *prog_name);
+void shell_no_interactive(char *prog_name);
 
-char *read_input(void);
-char *read_stream(void);
+char *read_input(char *prog_name);
+char *read_stream(char *prog_name);
 char **get_args(char *input);
-int create_new_process(char **args);
+int create_new_process(char *prog_name, char **args);
 int builtin_exit(char **args);
 int builtin_env(char **args);
-int run_execute(char **args);
+int run_execute(char *prog_name, char **args);
 
 char *find_executable(char *program);
 
