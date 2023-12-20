@@ -13,6 +13,12 @@ char *find_executable(char *program)
 	char *directory = strtok(path_copy, ":");
 	char *full_path = malloc(1024 * sizeof(char));
 
+	if (full_path == NULL)
+	{
+        free(path_copy);
+        return (NULL);
+    }
+
 	while (directory != NULL)
 	{
 		sprintf(full_path, "%s/%s", directory, program);
