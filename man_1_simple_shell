@@ -1,35 +1,37 @@
 .\" Manpage for Simple Shell.
-.TH _SHELL 1 "22 December 2023" "Version 1.0" "Linux Programmer's Manual"
+.TH _SHELL 1 "22 December 2023" "Version 1.0"
 
 .SH NAME
-.B Simple Shell - create a simple shell to used in C language 
+.SS Simple Shell - create a simple shell to used in C language 
 
 .SH SYNOPSIS
-#include "shell.h"
-
-int _shell(int ac, char **argv);
+.SS ./hsh [options] [command | file]
 
 .SH DESCRIPTION
-.B 
+.SS The simple shell in C is a basic command-line interpreter that allows users to interact with the operating system by entering commands.
 
-.SH PARAMETERS
+.SH COMMAND
+.SS .B env - built-in command that prints the current environment
 
-.SH FORMAT SPECIFIERS
+.SS .B exit - built-in command that prints exit the shell
 
-.SH EXAMPLES
-.B out the ./hsh echo \"ls\" | ./hsh
+.SS .B ls - list the content of current directory
 
-It shows the ls command use by the passive way
-
-.B in the ./hsh ls -l
 ...
 
-.B in the ./hsh exit
+.SH EXAMPLES
+.SS at current terminal, echo "ls" | ./hsh
 
-It exits the programme
+It shows the ls command non-interactively
 
+.SS in shell terminal (after executing ./hsh), ls -l
 
+It shows the ls command with flag -l
+
+.SS in shell terminal (after executing ./hsh), exit
+ 
+It exits the program
 
 .SH AUTHOR
-.SS Tuyen Huynh
 .SS Gab Martin
+.SS Tuyen Huynh
