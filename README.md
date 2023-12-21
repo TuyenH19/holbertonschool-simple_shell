@@ -1,9 +1,10 @@
 # holbertonschool-simple_shell
-![plot](images/FCSS.png)
+![Alt text](images/FCSS.png)
 
 ## Description
 
 This project is a simple UNIX command interpreter that replicates some functionalities of the shell (sh).
+
 This mini shell reads commands from either interactive mode and non-interactive mode.
 
 ## Files
