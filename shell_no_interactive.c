@@ -20,8 +20,8 @@ void shell_no_interactive(char *prog_name)
 		free(input);
 		free(args);
 
-		if (status >= 0)
-			exit(status);
+		if (status == 0)
+			exit(EXIT_SUCCESS);
 
 	} while (status == -1);
 }
