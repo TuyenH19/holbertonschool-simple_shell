@@ -1,5 +1,5 @@
 # holbertonschool-simple_shell
-![Alt text](images/FCSS.png)
+![Alt text](image/FCSS.png)
 
 ## Description
 
