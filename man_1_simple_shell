@@ -1,5 +1,5 @@
 .\" Manpage for Simple Shell.
-.TH _SHELL 1 "22 December 2023" "Version 1.0"
+.TH MY _SHELL 1 "22 December 2023" "Version 1.0" "Simple Shell man page"
 
 .SH NAME
 .SS Simple Shell - create a simple shell to used in C language 
@@ -10,27 +10,38 @@
 .SH DESCRIPTION
 .SS The simple shell in C is a basic command-line interpreter that allows users to interact with the operating system by entering commands.
 
+.SS There are two modes to run simple shell, interactive mode and non-interactive mode.
+
+.SS Command to execute the Simple Shell program: gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
+
 .SH COMMAND
-.SS .B env - built-in command that prints the current environment
+.SS env - built-in command that prints current environment
 
-.SS .B exit - built-in command that prints exit the shell
+.SS exit - built-in command to exit the shell
 
-.SS .B ls - list the content of current directory
+.SS ls - list the content of current directory
 
-...
+.SS ls -la - long list all contents of current directory
 
 .SH EXAMPLES
-.SS at current terminal, echo "ls" | ./hsh
+.SS command on one line: echo \fB"ls"\fR | ./hsh
 
-It shows the ls command non-interactively
+It shows the ls command with mode non-interactively
 
-.SS in shell terminal (after executing ./hsh), ls -l
+.SS in Simple Shell, input command ls -l
 
-It shows the ls command with flag -l
+It shows the ls command with flag -l and then return the prompt
 
-.SS in shell terminal (after executing ./hsh), exit
+.SS in Simple Shell, input command exit
  
-It exits the program
+It exits current shell terminal and back to main terminal
+
+.SS in Simple Shell, input command env
+
+It prints current environment and then return the prompt
+
+.SH BUGS
+.SS No known bugs.
 
 .SH AUTHOR
 .SS Gab Martin
