@@ -21,7 +21,7 @@ This mini shell reads commands from either interactive mode and non-interactive 
 | shell_interactive.c | Run shell interactive mode. |
 | shell_no_interactive.c | Run shell non-interactive mode. |
 | get_args.c | Split a string into tokens. |
-| run_execute.c | Number of builtin functions. |
+| run_execute.c | Execute program. |
 | find_executable.c | Find the full path of an executable. |
 
 ## List of functions and system calls.
