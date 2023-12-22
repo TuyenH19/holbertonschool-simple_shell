@@ -38,14 +38,13 @@ char *find_executable(char *program)
 }
 
 /**
- * _getenv - get the environment variable
+ * _getenv - get the environment of the path
  * @name: path name
  *
- * Return: environement
+ * Return: environement or NULL if it not found
 */
 char *_getenv(const char *name)
 {
-	extern char **environ;
 	int i;
 	char *token;
 

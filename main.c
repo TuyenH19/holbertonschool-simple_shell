@@ -4,7 +4,8 @@
  * main - UNIX command line interpreter
  * @ac: number of arguments
  * @argv: arguments
- * Return: Nothing
+ *
+ * Return: 0 on success
 */
 int main(int ac, char *argv[])
 {
