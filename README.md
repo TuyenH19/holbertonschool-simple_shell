@@ -15,13 +15,13 @@ This mini shell reads commands from either interactive mode and non-interactive 
 | main.c | Main function, interactive and non-interactive. |
 | create_new_process.c | Function that creates a new process. |
 | builtin_env.c | Function that prints environment variables. |
-| builtin_exit.c | Exit shell with a given state. |
+| builtin_exit.c | Exit the shell. |
 | read_input.c | Read a line from stdin. |
 | read_stream.c | Read a line from the stream. |
 | shell_interactive.c | Run shell interactive mode. |
 | shell_no_interactive.c | Run shell non-interactive mode. |
 | get_args.c | Split a string into tokens. |
-| run_execute.c | Number of builtin functions. |
+| run_execute.c | Execute program. |
 | find_executable.c | Find the full path of an executable. |
 
 ## List of functions and system calls.
