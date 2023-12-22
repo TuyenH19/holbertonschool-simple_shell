@@ -45,7 +45,6 @@ char *find_executable(char *program)
 */
 char *_getenv(const char *name)
 {
-	extern char **environ;
 	int i;
 	char *token;
 
